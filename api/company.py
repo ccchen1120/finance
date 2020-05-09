@@ -6,7 +6,7 @@ from pprint import pprint
 import pandas as pd
 
 
-def callCompanies(company_api):
+def call_companies(company_api):
 
     latest_filing_date = ""  # date | Return companies whose latest 10-Q or 10-K was filed on or after this date (optional)
     sic = ""  # str | Return companies with the given Standard Industrial Classification code (optional)
@@ -47,7 +47,7 @@ def callCompanies(company_api):
         print("Exception when calling CompanyApi->get_all_companies: %s\n" % e)
 
 
-def callCompanySearch(company_api):
+def call_company_search(company_api):
 
     query = "Apple"  # str | Search parameters
     page_size = 100  # int | The number of results to return (optional) (default to 100)
@@ -60,7 +60,7 @@ def callCompanySearch(company_api):
         print("Exception when calling CompanyApi->search_companies: %s\r\n" % e)
 
 
-def callCompanyLookup(company_api):
+def call_company_lookup(company_api):
 
     identifier = "AAPL"  # str | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
@@ -71,7 +71,7 @@ def callCompanyLookup(company_api):
         print("Exception when calling CompanyApi->get_company: %s\r\n" % e)
 
 
-def callCompanyAllSecurities(company_api):
+def call_company_all_securities(company_api):
     identifier = "AAPL"  # str | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
     next_page = (
         ""  # str | Gets the next page of data from a previous API call (optional)
@@ -88,7 +88,7 @@ def callCompanyAllSecurities(company_api):
         print("Exception when calling CompanyApi->get_company_securities: %s\r\n" % e)
 
 
-def callCompanyAllNews(company_api):
+def call_company_all_news(company_api):
 
     identifier = "AAPL"  # str | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
     page_size = 100  # int | The number of results to return (optional) (default to 100)
@@ -106,7 +106,7 @@ def callCompanyAllNews(company_api):
         print("Exception when calling CompanyApi->get_company_news: %s\r\n" % e)
 
 
-def callCompanyAllFilings(company_api):
+def call_company_all_filings(company_api):
     identifier = "AAPL"  # str | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
     report_type = ""  # str | Filter by report type [see - https://docs.intrinio.com/documentation/sec_filing_report_types]. Separate values with commas to return multiple report types. (optional)
     start_date = "2015-01-01"  # date | Filed on or after the given date (optional)
@@ -132,7 +132,7 @@ def callCompanyAllFilings(company_api):
         print("Exception when calling CompanyApi->get_company_filings: %s\r\n" % e)
 
 
-def callCompanyIPOs(company_api):
+def call_company_ipos(company_api):
 
     ticker = ""  # str | Return IPOs with the given ticker (typically the IPO for the company) (optional)
     status = ""  # str | Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occured and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand (optional)
@@ -159,7 +159,7 @@ def callCompanyIPOs(company_api):
         print("Exception when calling CompanyApi->get_company_ipos: %s\r\n" % e)
 
 
-def callCompanyDataPoint(company_api):
+def call_company_data_point(company_api):
 
     identifier = "AAPL"  # str | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
     tag = "marketcap"  # str | An Intrinio data tag ID or code reference [see - https://data.intrinio.com/data-tags]
@@ -174,7 +174,7 @@ def callCompanyDataPoint(company_api):
         )
 
 
-def callCompanyHistoricalData(company_api):
+def call_company_historical_data(company_api):
     identifier = "AAPL"  # str | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
     tag = "marketcap"  # str | An Intrinio data tag ID or code reference [see - https://data.intrinio.com/data-tags]
     frequency = "daily"  # str | Return historical data in the given frequency (optional) (default to daily)

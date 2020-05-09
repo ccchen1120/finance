@@ -6,7 +6,7 @@ from pprint import pprint
 import pandas as pd
 
 
-def callSecurities(security_api):
+def call_securities(security_api):
 
     active = True  # bool | When True, return securities that are active. When False, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). (optional)
     delisted = False  # bool | When True, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When False, return securities that have not been delisted. (optional)
@@ -56,7 +56,7 @@ def callSecurities(security_api):
         print("Exception when calling SecurityApi->get_all_securities: %s\r\n" % e)
 
 
-def callSecurityScreen(security_api):
+def call_security_screen(security_api):
 
     logic = (
         intrinio_sdk.SecurityScreenGroup()
@@ -83,7 +83,7 @@ def callSecurityScreen(security_api):
         print("Exception when calling SecurityApi->screen_securities: %s\r\n" % e)
 
 
-def callSecuritySearch(security_api):
+def call_security_search(security_api):
 
     query = "Apple"  # str |
     page_size = 100  # int | The number of results to return (optional) (default to 100)
@@ -96,7 +96,7 @@ def callSecuritySearch(security_api):
         print("Exception when calling SecurityApi->search_securities: %s\r\n" % e)
 
 
-def callSecurityLookup(security_api):
+def call_security_lookup(security_api):
 
     identifier = (
         "AAPL"  # str | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
@@ -109,7 +109,7 @@ def callSecurityLookup(security_api):
         print("Exception when calling SecurityApi->get_security_by_id: %s\r\n" % e)
 
 
-def callSecurityStockPrice(security_api):
+def call_security_stock_price(security_api):
 
     identifier = (
         "AAPL"  # str | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
@@ -139,7 +139,7 @@ def callSecurityStockPrice(security_api):
         )
 
 
-def callSecurityRealTimeStockPrice(security_api):
+def call_security_realtime_stock_price(security_api):
 
     identifier = (
         "AAPL"  # str | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
@@ -159,7 +159,7 @@ def callSecurityRealTimeStockPrice(security_api):
         )
 
 
-def callSecurityStockPriceAdjustments(security_api):
+def call_security_stock_price_adjustments(security_api):
 
     identifier = (
         "AAPL"  # str | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
@@ -193,7 +193,7 @@ def callSecurityStockPriceAdjustments(security_api):
         )
 
 
-def callSecurityDataPoint(security_api):
+def call_security_data_point(security_api):
 
     identifier = (
         "AAPL"  # str | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
@@ -210,7 +210,7 @@ def callSecurityDataPoint(security_api):
         )
 
 
-def callSecurityHistoricalData(security_api):
+def call_security_historical_data(security_api):
 
     identifier = (
         "AAPL"  # str | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
@@ -251,7 +251,7 @@ def callSecurityHistoricalData(security_api):
         )
 
 
-def callSecurityLatestDividendRecord(security_api):
+def call_security_latest_dividend_record(security_api):
 
     identifier = (
         "AAPL"  # str | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
@@ -267,7 +267,7 @@ def callSecurityLatestDividendRecord(security_api):
         )
 
 
-def callSecurityLatestEarningsRecord(security_api):
+def call_security_latest_earnings_record(security_api):
 
     identifier = (
         "AAPL"  # str | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
@@ -283,7 +283,7 @@ def callSecurityLatestEarningsRecord(security_api):
         )
 
 
-def callSecurityZacksEPSSurprises(security_api):
+def call_security_zacks_eps_surprises(security_api):
 
     identifier = (
         "AAPL"  # str | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
@@ -306,7 +306,7 @@ def callSecurityZacksEPSSurprises(security_api):
         )
 
 
-def callSecurityZacksAnalystRatings(security_api):
+def call_security_zacks_analyst_ratings(security_api):
     identifier = (
         "AAPL"  # str | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
     )

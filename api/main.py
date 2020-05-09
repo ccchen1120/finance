@@ -1,5 +1,6 @@
 from company import *
 from security import *
+import intrinio_sdk
 
 sandbox_key = "OmUzZjJjOWU0YWM3Y2U1NTYyYzQyODdkM2I4MzdiODE5"
 production_key = "OjU4ZTEyMjFjZDVlOGNjMjA2ZDEwNzBkOGNlZDU1MDU5"
@@ -13,33 +14,32 @@ if __name__ == "__main__":
     """
     company_api = intrinio_sdk.CompanyApi()
 
-    # callCompanies(company_api)
-    # callCompanySearch(company_api)
-    # callCompanyLookup(company_api)
-    # callCompanyAllSecurities(company_api)
-    # callCompanyAllNews(company_api)
-    # callCompanyAllFilings(company_api)
-    # callCompanyIPOs(company_api)
-    # callCompanyDataPoint(company_api)
-    # callCompanyHistoricalData(company_api)
+    call_companies(company_api)
+    # call_company_search(company_api)
+    # call_company_lookup(company_api)
+    # call_company_all_securities(company_api)
+    # call_company_all_news(company_api)
+    # call_company_all_filings(company_api)
+    # call_company_ipos(company_api)
+    # call_company_data_point(company_api)
+    # call_company_historical_data(company_api)
 
     """
         Security API
     """
     security_api = intrinio_sdk.SecurityApi()
-    # callSecurities(security_api)
-    # callSecurityScreen(security_api)
-    # callSecuritySearch(security_api)
-    # callSecurityLookup(security_api)
-    # callSecurityLookup(security_api)
-    # callSecurityStockPrice(security_api)
-    # callSecurityRealTimeStockPrice(security_api)
-    # callSecurityStockPriceAdjustments(security_api)
-    # callSecurityDataPoint(security_api)
-    # callSecurityHistoricalData(security_api)
-    # callSecurityLatestDividendRecord(security_api)
-    # callSecurityLatestEarningsRecord(security_api)
-    # callSecurityZacksEPSSurprises(security_api)
+    # call_securities(security_api)
+    # call_security_screen(security_api)
+    # call_security_search(security_api)
+    # call_security_lookup(security_api)
+    # call_security_stock_price(security_api)
+    # call_security_realtime_stock_price(security_api)
+    # call_security_stock_price_adjustments(security_api)
+    # call_security_data_point(security_api)
+    # call_security_historical_data(security_api)
+    # call_security_latest_dividend_record(security_api)
+    # call_security_latest_earnings_record(security_api)
+    # call_security_zacks_eps_surprises(security_api)
     # skip sales surprices
     # skip analyst rating snapshot
-    callSecurityZacksAnalystRatings(security_api)
+    # call_security_zacks_analyst_ratings(security_api)
