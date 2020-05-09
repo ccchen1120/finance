@@ -5,11 +5,6 @@ from intrinio_sdk.rest import ApiException
 from pprint import pprint
 import pandas as pd
 
-sandbox_key = "OmUzZjJjOWU0YWM3Y2U1NTYyYzQyODdkM2I4MzdiODE5"
-production_key = "OjU4ZTEyMjFjZDVlOGNjMjA2ZDEwNzBkOGNlZDU1MDU5"
-
-intrinio_sdk.ApiClient().configuration.api_key["api_key"] = sandbox_key
-
 
 def callCompanies(company_api):
 
