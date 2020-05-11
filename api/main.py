@@ -1,5 +1,7 @@
+#  TODO: fix unresolved import
 from company import *
 from security import *
+from index import *
 import intrinio_sdk
 
 sandbox_key = "OmUzZjJjOWU0YWM3Y2U1NTYyYzQyODdkM2I4MzdiODE5"
@@ -14,7 +16,7 @@ if __name__ == "__main__":
     """
     company_api = intrinio_sdk.CompanyApi()
 
-    call_companies(company_api)
+    # call_companies(company_api)
     # call_company_search(company_api)
     # call_company_lookup(company_api)
     # call_company_all_securities(company_api)
@@ -43,3 +45,16 @@ if __name__ == "__main__":
     # skip sales surprices
     # skip analyst rating snapshot
     # call_security_zacks_analyst_ratings(security_api)
+
+    """
+        Index API
+    """
+    index_api = intrinio_sdk.IndexApi()
+    # call_indices(index_api)
+    # call_index_lookup(index_api)
+    # call_index_data_point(index_api)
+    # call_index_historical_data(index_api)
+    # call_index_economic_indices(index_api)
+    # call_index_economic_data_point(index_api)
+    # call_index_economic_historical_data(index_api)
+    call_index_sic_indices(index_api)
